@@ -83,3 +83,13 @@ function createBudgetTracker() {
 let budget = createBudgetTracker();
 console.log(budget(300)); // Current Balance: -$300
 console.log(budget(200)); // Current Balance: -$500
+
+// Task 8
+function calculateGrowth(years, revenue) {
+    if (years === 0) return revenue;
+    if (years > 10) return calculateGrowth(10, revenue);
+    return calculateGrowth(years - 1, revenue * 1.05);
+}
+
+console.log(calculateGrowth(8, 1000));
+console.log(calculateGrowth(5, 5000));
